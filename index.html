@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#execute" onclick="callexe();return false;">Run an exe</a>
+    <script>
+      var callexe = function () {
+        var oShell = new ActiveXObject("Shell.Application");
+        var commandtoRun = `C:\Program Files *(x86)\Steam\steamapps\common\Resident Evil Village BIOHAZARD VILLAGE\re8.exe`;
+        oShell.ShellExecute(commandtoRun, "", "", "open", "1");
+      };
+    </script>
+  </body>
+</html>
